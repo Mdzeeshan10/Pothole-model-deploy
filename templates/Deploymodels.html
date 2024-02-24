@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zeeshan Models Deployed Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		Style for the page
+		body {
+			background-image: url("/static/top-deep-learning-frameworks.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			background-color: #F2F2F2;
+		}
+		
+		header {
+			background-image: url("/static/artificial-intelligence.jpeg");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px;
+		}
+		
+		nav {
+			/* background-color: #333; */
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			position: sticky;
+			bottom: 0;
+		}
+		
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+		}
+		
+		nav li {
+			margin-right: 20px;
+		}
+		
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+		
+		nav a:hover {
+			color: #F2F2F2;
+		}
+		
+		main {
+			/* background-image: url("/static/giphy-5.gif");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px; */
+			margin: 20px;
+			padding: 20px;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 10px #ccc;
+			border-radius: 10px;
+		}
+		
+		h1 {
+			font-size: 40px;
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		h2 {
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: justify;
+		}
+		
+		ul {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<!-- <img src="/Users/MohammedZeeshanShaik/OneDrive - Insight/Desktop/IMAGES/zeeshan.png" alt="AI icon" style="float:left;width:225px;height:225px;" > -->
+		<h1>All AI Models Deployment</h1>
+	<br>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<!-- <li><a href="#">Introduction</a></li>
+				<li><a href="#">Technologies</a></li> -->
+				<li><a href="Deploymodels">Deployment Models</a></li>
+				<li><a href="#">Challenges</a></li>
+				<li><a href="#">Future Trends</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Model Deployed</h1>
+		<h2>>>color show percentage in image use <li><a href="colorimageshow">Deployment Models</a></li></h2>
+		<h2>>>Azure Computer Vission Analyze Image <li><a href="analyzecomputervission" target="_blank">Deployment Models</a></li></h2>
+        <h2>>> Pothole Detection On Road</h2>
+		<p><h3>Machine Vision:</h3>The approach is to use machine vision technology to detect potholes on roads. This method involves using cameras mounted on vehicles or drones to capture images of the road surface. The images are then analyzed using algorithms to identify and locate potholes. Machine vision can be efficient and cost-effective, but it may require specialized equipment and expertise.
+			<br><br>
+			<img src="/static/RoadPothole.gif" alt="Workplace" usemap="#workmap" width="370" height="350">
+			<img src="/static/VRA75_.gif" alt="Workplace" style="float:right" usemap="#workmap" width="700" height="350">
+			<br><br>
+			<h3>What is Pothole?</h3>
+			A pothole is a type of road surface damage that occurs when the pavement or asphalt on a road surface deteriorates due to the effects of weather, traffic, age and poor road construction or maintenance. Potholes are typically circular or oval-shaped holes in the road, ranging in size from small depressions to larger cavities.
+			<br><br>
+			<h3>Benefits Of Pothole Detection Classification</h3>
+			<h4>Improved road safety:</h4> Pothole detection classification can help identify and locate potholes on roads and highways, which can be hazardous to drivers, cyclists, and pedestrians. By alerting road maintenance crews to the presence of potholes, pothole detection classification can help reduce the risk of accidents and injuries.
+			<h4>Cost savings:</h4> Pothole detection classification can help road maintenance crews prioritize and schedule repairs more efficiently, which can reduce the overall cost of road maintenance. By identifying potholes before they become larger and more costly to repair, pothole detection classification can also help extend the lifespan of roads and highways.
+			<h4>Increased efficiency:</h4> Pothole detection classification can help automate the process of identifying and locating potholes, which can save time and resources compared to manual inspections. By using computer vision techniques to analyze images and videos, pothole detection classification can also identify potholes that might be difficult or dangerous for humans to detect.
+			<h4>Data-driven decision-making:</h4> Pothole detection classification can generate data on the location, size, and severity of potholes, which can be used to make data-driven decisions about road maintenance and repair. By analyzing this data over time, road maintenance crews can identify trends and patterns in pothole formation and prioritize preventative maintenance strategies.
+			<h4>Improved quality of life:</h4> Pothole detection classification can help improve the quality of life for residents and visitors by reducing the inconvenience and discomfort associated with driving on pothole-ridden roads. By improving road conditions, pothole detection classification can also support economic development and tourism in the surrounding areas.
+			</p>
+		<h2>## Predict Now</h2>
+
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+
+            <form method = "POST"  action="/upload", enctype="multipart/form-data">
+                <div class="bd-example" align ="middle">
+                    <input type="file" id="photo" name="file" accept="image/*" onchange="loadFile(event)">
+                    <input type="submit" Value="Detect Pothole">
+                    <p><img id="output" width="400"/></p>
+                    <script>
+                        var loadFile = function(event) {
+                            var image = document.getElementById('output');
+                            image.src=URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+
+                </div>
+            </form>
+
+			<h2>>>Video Camera To Detection Pothole</h2>
+
+			<P>If you want to see live Pothole detection in camera then click delow button to detect pothole in videos your web camera is opened then put the image of pothole in fornt of your web camera and see the screen in show, In image "pothole is coming" or not pothole then show "Normal Image". If you want to exit your web camera then press "x". </P>
+
+			<form method = "POST"  action="/video", enctype="multipart/form-data">
+				<div class="bd-example" align ="middle">
+					<button name="forwardBtn" onclick="video_detect()">Click me</button>
+				</div>
+			</form>
+
+
+
+		

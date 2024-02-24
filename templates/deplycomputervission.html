@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zeeshan Models Deployed Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		Style for the page
+		body {
+			background-image: url("/static/top-deep-learning-frameworks.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			background-color: #F2F2F2;
+		}
+		
+		header {
+			background-image: url("/static/Left-Right-Brain-Signals.gif");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px;
+		}
+		
+		nav {
+			/* background-color: #333; */
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			position: sticky;
+			bottom: 0;
+		}
+		
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+		}
+		
+		nav li {
+			margin-right: 20px;
+		}
+		
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+		
+		nav a:hover {
+			color: #F2F2F2;
+		}
+		
+		main {
+			/* background-image: url("/static/giphy-5.gif");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px; */
+			margin: 20px;
+			padding: 20px;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 10px #ccc;
+			border-radius: 10px;
+		}
+		
+		h1 {
+			font-size: 40px;
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		h2 {
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: justify;
+		}
+		
+		ul {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<!-- <img src="/Users/MohammedZeeshanShaik/OneDrive - Insight/Desktop/IMAGES/zeeshan.png" alt="AI icon" style="float:left;width:225px;height:225px;" > -->
+		<h1>All AI Models Deployment</h1>
+	<br>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<!-- <li><a href="#">Introduction</a></li>
+				<li><a href="#">Technologies</a></li> -->
+				<li><a href="Deploymodels">Deployment Models</a></li>
+				<li><a href="#">Challenges</a></li>
+				<li><a href="#">Future Trends</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Azuer Computer Vission</h1>
+        <h2>>> Analyze Image</h2>
+		<p><h3>What is Image Analysis?</h3><br>The Computer Vision Image Analysis service can extract a wide variety of visual features from your images. For example, it can determine whether an image contains adult content, find specific brands or objects, or find human faces.
+			<br><br>
+			<img src="/static/zee.jpg" alt="Workplace" usemap="#workmap" width="400" height="230">
+			<img src="/static/analyze.jpg" alt="Workplace" style="float:right" usemap="#workmap" width="720" height="450">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<h3>Azure Image Analyzer</h3>
+			Azure Image Analyzer is a service provided by Microsoft Azure that allows you to analyze images using artificial intelligence (AI) capabilities. It leverages computer vision algorithms to extract valuable insights and information from images. Here are some key features and functionalities of Azure Image Analyzer:
+			<br><br>
+			
+			<h4>Object Detection:</h4> Azure Image Analyzer can detect and identify various objects within an image. It can locate and outline objects such as people, animals, vehicles, and everyday items.<br><br> Object detection is a computer technology related to computer vision and image processing that deals with detecting instances of semantic objects of a certain class (such as humans, buildings, or cars) in digital images and videos. Well-researched domains of object detection include face detection and pedestrian detection. Object detection has applications in many areas of computer vision, including image retrieval and video surveillance.
+			<h4>Image Classification:</h4> The service can classify images into predefined categories or tags. For example, it can recognize and label images as "cat," "dog," "building," "nature," or any custom categories you define. <br><br> Image Classification is a fundamental task that attempts to comprehend an entire image as a whole. The goal is to classify the image by assigning it to a specific label. Typically, Image Classification refers to images in which only one object appears and is analyzed. In contrast, object detection involves both classification and localization tasks, and is used to analyze more realistic cases in which multiple objects may exist in an image.
+			<h4>Image Moderation:</h4> Azure Image Analyzer provides moderation capabilities to assess the content of images for potentially objectionable or inappropriate material. It can help filter out adult content, violence, or other sensitive content.<br><br> On Internet websites that invite users to post comments, content moderation is the process of detecting contributions that are irrelevant, obscene, illegal, harmful, or insulting with regards to useful or informative contributions. The purpose of content moderation is to remove or apply a warning label to problematic content or allow users to block and filter content themselves.
+			<h4>Azure Cognitive Service for Vision pricing</h4> This state-of-the-art, cloud-based API provides developers with access to advanced algorithms that allow you to extract rich information from images and video in order to categorize and process visual data. Capabilities include image analytics, tagging, recognition celebrities, text extraction, and spatial analysis. And you want more information click <li><a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/" target="_blank">Azure Cognitive Service for Vision pricing</a></li>
+			</p>
+		<h2>## Predict Now</h2>
+
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+
+            <form method = "POST"  action="/imageanalyze", enctype="multipart/form-data">
+                <div class="bd-example" align ="middle">
+                    <input type="file" id="photo" name="file" accept="image/*" onchange="loadFile(event)">
+                    <input type="submit" Value="Analyze Image">
+                    <p><img id="output" width="400"/></p>
+                    <script>
+                        var loadFile = function(event) {
+                            var image = document.getElementById('output');
+                            image.src=URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+
+                </div>
+            </form>
+			
+
+
+		

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zeeshan Models color image show Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		Style for the page
+		body {
+			background-image: url("/static/top-deep-learning-frameworks.jpg");
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			background-color: #F2F2F2;
+		}
+		
+		header {
+			background-image: url("/static/artificial-intelligence.jpeg");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px;
+		}
+		
+		nav {
+			/* background-color: #333; */
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			position: sticky;
+			bottom: 0;
+		}
+		
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: center;
+		}
+		
+		nav li {
+			margin-right: 20px;
+		}
+		
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			transition: color 0.3s ease;
+		}
+		
+		nav a:hover {
+			color: #F2F2F2;
+		}
+		
+		main {
+			/* background-image: url("/static/giphy-5.gif");
+			color: #fff;
+			padding: 50px;
+			text-align: center;
+			font-size: 50px; */
+			margin: 20px;
+			padding: 20px;
+			background-color: #ffffff;
+			box-shadow: 0px 0px 10px #ccc;
+			border-radius: 10px;
+		}
+		
+		h1 {
+			font-size: 40px;
+			text-align: center;
+			margin-top: 0;
+		}
+		
+		h2 {
+			font-size: 30px;
+			margin-top: 20px;
+		}
+		
+		p {
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: justify;
+		}
+		
+		ul {
+			font-size: 18px;
+			line-height: 1.5;
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			font-size: 14px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+	<!-- <img src="/Users/MohammedZeeshanShaik/OneDrive - Insight/Desktop/IMAGES/zeeshan.png" alt="AI icon" style="float:left;width:225px;height:225px;" > -->
+		<h1>All AI Models Deployment</h1>
+	<br>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<!-- <li><a href="#">Introduction</a></li>
+				<li><a href="#">Technologies</a></li> -->
+				<li><a href="Deploymodels">Deployment Models</a></li>
+				<li><a href="#">Challenges</a></li>
+				<li><a href="#">Future Trends</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Model Deployed</h1>
+
+        <h2>>> Color use in image percentage analyze</h2>
+		<p><h3>Kmeans Cluster:</h3>K-means is a popular clustering algorithm used in machine learning and data analysis. It aims to partition a set of data points into a predefined number of clusters based on their similarity. The algorithm assigns each data point to the cluster with the nearest mean value, hence the name "K-means."
+			<br><br>
+			<img src="/static/colorimage.gif" alt="Workplace" style="float:left" usemap="#workmap" width="700" height="350">
+
+			<img src="/static/kmean.gif" alt="Workplace" style="float:right" usemap="#workmap" width="420" height="350">
+			
+		</p><br><br>
+		<P>
+			<h3>Here's how the K-means algorithm works:</h3>
+			<br>
+			<h4>Initialization:</h4>  Randomly choose K initial cluster centers. These centers are often referred to as centroids.
+			<h4>Assignment:</h4> Assign each data point to the nearest centroid based on some distance metric, typically Euclidean distance. This step creates K clusters.
+			<h4>Update:</h4> Recalculate the centroids of each cluster by taking the mean of all the data points assigned to that cluster.
+			<h4>Iteration:</h4> Repeat the assignment and update steps until convergence. Convergence occurs when the centroids no longer change significantly or a maximum number of iterations is reached.
+			<br><br>The algorithm seeks to minimize the within-cluster variance, which is the sum of the squared distances between each data point and its centroid within the cluster. By minimizing this variance, K-means aims to create compact and well-separated clusters.
+			<br><br>K-means has several advantages, such as simplicity, scalability, and efficiency for large datasets. However, it is sensitive to the initial choice of centroids and may converge to a suboptimal solution. Therefore, it is common to run the algorithm multiple times with different initializations and choose the clustering result with the lowest variance.
+			<br><br>K-means is widely used in various applications, including image segmentation, customer segmentation, anomaly detection, and data compression. It provides a straightforward and interpretable way to group data points based on their similarity.
+			<br><br>
+		</p>
+		<h2>## Predict Now</h2>
+
+            {% if result %}
+                <p>{{ result }}</p>
+            {% endif %}
+
+            <form method = "POST"  action="/show", enctype="multipart/form-data">
+                <div class="bd-example" align ="middle">
+                    <input type="file" id="photo" name="file" accept="image/*" onchange="loadFile(event)">
+					
+					<label>Number of color</label>
+					<input type="text" name="nocolor">
+                    <input type="submit" Value="Show Color">
+                    <p><img id="output" width="400"/></p>
+                    <script>
+                        var loadFile = function(event) {
+                            var image = document.getElementById('output');
+                            image.src=URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+
+                </div>
+            </form>
+
+
+
+		
